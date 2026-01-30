@@ -1,0 +1,32 @@
+Skipping import of cpp extensions due to incompatible torch version 2.10.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+INFO:     Started server process [3344662]
+INFO:     Waiting for application startup.
+Detected 1 GPU devices
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9993 (Press CTRL+C to quit)
+Skipping import of cpp extensions due to incompatible torch version 2.10.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+INFO:     Shutting down
+Process Process-1:
+Traceback (most recent call last):
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/tanmoyh_iitp/tanmoy/ArogyaSutra/tools/LLMDet/multi_deploy.py", line 128, in _worker_process
+    request_id, request_data = request_queue.get()
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/multiprocessing/queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Loading LLMDet model to cuda:0...
+Model loaded to cuda:0
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3344662]
+Initialized model worker processes on 1 devices
+Shutting down all model worker processes

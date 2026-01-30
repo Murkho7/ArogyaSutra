@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=MedItools
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=1-20:00:00
+#SBATCH --output=Batchlog/tools%j.log
+
+
+module load MLDL/miniconda3
+module load cuda/12.8
+conda activate medenv
+
+python -u tools/lanuch_tools.py --config tools/tools_config.json

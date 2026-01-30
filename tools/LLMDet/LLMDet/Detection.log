@@ -1,0 +1,26 @@
+INFO:     Started server process [4125509]
+INFO:     Waiting for application startup.
+Detected 1 GPU devices
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9993 (Press CTRL+C to quit)
+Traceback (most recent call last):
+  File "/home/tanmoyh_iitp/tanmoy/finetune_Qwen25_GRPO_verl/MedQASeg/tools/LLMDet/multi_deploy.py", line 116, in _worker_process
+    model = GroundingDinoForObjectDetection.from_pretrained(model_id).to(device)
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4343, in to
+    return super().to(*args, **kwargs)
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1174, in to
+    return self._apply(convert)
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  [Previous line repeated 9 more times]
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/site-packages/torch/nn/modules/module.py", line 805, in _apply
+    param_applied = fn(param)
+  File "/home/tanmoyh_iitp/.conda/envs/tools/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in convert
+    return t.to(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 79.14 GiB of which 11.19 MiB is free. Process 4105514 has 78.27 GiB memory in use. Including non-PyTorch memory, this process has 868.00 MiB memory in use. Of the allocated memory 410.14 MiB is allocated by PyTorch, and 43.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading LLMDet model to cuda:0...
+cuda:0 initialization failed: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 79.14 GiB of which 11.19 MiB is free. Process 4105514 has 78.27 GiB memory in use. Including non-PyTorch memory, this process has 868.00 MiB memory in use. Of the allocated memory 410.14 MiB is allocated by PyTorch, and 43.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

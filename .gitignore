@@ -1,0 +1,8 @@
+# Model checkpoints
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+tools/Depth-Anything-V2/checkpoints/
+

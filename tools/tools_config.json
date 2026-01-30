@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Detection",
+    "path": "LLMDet",
+    "conda_env": "tools",
+    "gpu_ids": "0",
+    "port": 9993,
+    "app_module": "multi_deploy:app",
+    "workers": 1,
+    "logfile": "Detection.log"
+  },
+  {
+    "name": "Depth",
+    "path": "Depth-Anything-V2",
+    "conda_env": "tools",
+    "gpu_ids": "0",
+    "port": 9991,
+    "app_module": "multi_deploy:app",
+    "workers": 1,
+    "logfile": "Depth.log"
+  }
+]
